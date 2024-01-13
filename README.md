@@ -9,3 +9,5 @@ Command example:
 %d20 3 - bot send 3 rolls of dice d20
 
 %d100 2 - bot send 2 rolls of dice d100
+
+Max rolls - 4
