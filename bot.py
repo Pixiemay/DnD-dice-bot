@@ -15,75 +15,69 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
-    print(f'Бот {client.user} запущен!')
+    print(f'Bot {client.user} ready!')
 
 @bot.command()
 async def d20(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 20)
-        await ctx.reply(f'Кубик d20, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d20, the number dropped out: **{number}**')
         
 @bot.command()
 async def d100(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 100)
-        await ctx.reply(f'Кубик d100, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d100, the number dropped out: **{number}**')
         
 @bot.command()
 async def d12(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 12)
-        await ctx.reply(f'Кубик d12, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d12, the number dropped out: **{number}**')
         
 @bot.command()
 async def d10(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(0, 9)
-        await ctx.reply(f'Кубик d10, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d10, the number dropped out: **{number}**')
         
 @bot.command()
 async def d8(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 8)
-        await ctx.reply(f'Кубик d8, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d8, the number dropped out: **{number}**')
         
 @bot.command()
 async def d6(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 6)
-        await ctx.reply(f'Кубик d6, выпали числа: **{number}**')
+        await ctx.reply(f'Dice d6, the number dropped out: **{number}**')
         
 @bot.command()
 async def d4(ctx, rolls: int):
     if rolls > 4:
-        await ctx.reply('Превышен лимит кубиков!')
+        await ctx.reply('The dice limit has been exceeded!')
         return
     for i in range(rolls):
         number = random.randint(1, 4)
-        await ctx.reply(f'Кубик d4, выпали числа: **{number}**')
-
-@bot.tree.command(name="d20", description="Кинуть кубик d20.")
-async def d20(inter: discord.Interaction, rolls: app_commands.Range[int, 1, 4]):
-    for i in range(rolls):
-        number = random.randint(1, 20)
-        await inter.response.send_message(f'Кубик d20, выпали числа: **{number}**')
-
+        await ctx.reply(f'Dice d4, the number dropped out: **{number}**')
+        
 bot.run('token here')
