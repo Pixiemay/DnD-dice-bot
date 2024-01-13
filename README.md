@@ -2,6 +2,7 @@
 A bot simulating dice rolling like in the Dungeons and Dragons board game
 
 Bot prefix: %
+
 Bot commands: d100, d20, d12, d10, d8, d6, d4
 
 Command example: 
